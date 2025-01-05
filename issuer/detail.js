@@ -146,10 +146,10 @@ function reject(){
         getRequestCredential();
       })
       .catch(error => console.log('error', error));
-      /*let temp = JSON.parse(sessionStorage.getItem("issuerCredentialTable"));
+      let temp = JSON.parse(sessionStorage.getItem("issuerCredentialTable"));
       temp.splice(index,1);
       sessionStorage.setItem("issuerCredentialTable",JSON.stringify(temp));
       document.getElementById("rejecttext").style.display = "block";
       document.getElementById("acceptbox").style.display = "none";
-      document.getElementById("rejectbox").style.display = "none";*/
+      document.getElementById("rejectbox").style.display = "none";
 }
