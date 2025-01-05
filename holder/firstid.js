@@ -29,9 +29,6 @@ function getallcredential(){
 }
 
 function create_credential(){
-  sessionStorage.setItem("access_token","eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9vYXV0aC5hcnRlbWlzLnN0YWNrZWQuaXRkZy5pb1wvYXBpXC9hdXRoXC9sb2dpbi1ieS1lbWFpbCIsImlhdCI6MTY4MDAwMjM2NCwiZXhwIjoxNjgxMjk4MzY0LCJuYmYiOjE2ODAwMDIzNjQsImp0aSI6InZpUkhraTBrbzBCd2xTNlAiLCJzdWIiOiI3MjcyZjgxYy04YjAyLTQzZjctYjI3My02NDNiYWNmODAxZGUiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3Iiwib3JnX2lkIjoic3RhY2tlZCJ9.3rja2UpN9ov0kZ8RFhEYJU9ojqIl7DmxBOXKaAwRTsw");
-  sessionStorage.setItem("user_email","swsliu07@gmail.com");
-  sessionStorage.setItem("user_id","7272f81c-8b02-43f7-b273-643bacf801de");
     var myHeaders = new Headers();
     myHeaders.append("Authorization", "Bearer "+sessionStorage.getItem("access_token"));
     myHeaders.append("Content-Type", "application/json");
