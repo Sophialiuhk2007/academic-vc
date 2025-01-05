@@ -15,7 +15,6 @@ function getIssuedCredential(){
         for (let j of ["AcademicTranscriptCredential","StudentIDCredential"]){
           if (JSON.stringify(result[j])!='[]'){
               for (let x of result[j]){
-                  if (JSON.parse(x.data).institution!="The Lawrenceville School") continue;
                   table.push(x);
               }
           }
@@ -43,7 +42,6 @@ function getRequestCredential(){
       for (let j of ["AcademicTranscriptCredential","StudentIDCredential"]){
         if (JSON.stringify(result[j])!='[]'){
             for (let x of result[j]){
-              if (JSON.parse(x.data).institution!="The Lawrenceville School") continue;// x.issuedDate.substring(0,10)!='2023-04-07'
               table.push(x);
             }
         }
