@@ -37,9 +37,8 @@ function signIn(){
       .then(result => {
         if (result.code === 200){
             sessionStorage.setItem("access_token",JSON.stringify(result.data.access_token).slice(1,-1));
-            sessionStorage.setItem("user_email",JSON.stringify(result.data.user_details.email).slice(1,-1));//.substring(1,JSON.stringify(result.data.user_details.email).length-1))
-            sessionStorage.setItem("user_id",JSON.stringify(result.data.user_details.id).slice(1,-1));
-            //console.log(sessionStorage.getItem("access_token"),sessionStorage.getItem("user_email"),sessionStorage.getItem("user_id"));          
+            sessionStorage.setItem("user_email",JSON.stringify(result.data.user_details.email).slice(1,-1));
+            sessionStorage.setItem("user_id",JSON.stringify(result.data.user_details.id).slice(1,-1));   
             getallcredential();
         }else{
             alert('error');
