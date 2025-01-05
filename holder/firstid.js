@@ -35,7 +35,7 @@ function create_credential(){
     let selected_schema = ["First Name","Last Name","Institution","Expiration Date","Student Id"];
     var credentialdata={};
     for (x of selected_schema){
-      if (x==="Institution") credentialdata[camelCase(x)] = "The Lawrenceville School"; //check if must be THEi
+      if (x==="Institution") credentialdata[camelCase(x)] = "THEi"; //check if must be THEi
       else credentialdata[camelCase(x)] = document.getElementById(x + 2).value;
     }
     console.log(JSON.stringify(credentialdata));
