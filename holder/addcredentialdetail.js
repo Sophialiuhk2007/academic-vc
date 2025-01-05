@@ -111,25 +111,5 @@ function create_credential(){
       })
       .catch(error => console.log('error', error));
 
-    /*credentialdata.Email = sessionStorage.getItem("user_email");
-    let today = new Date();
-    let todaydate = today.toISOString().substring(0,10);
-    let credentialall = JSON.parse(sessionStorage.getItem("all_credential"));
-    let credentialsample = {
-       "credentialId":"9cde5fd8-13cf-4922-886a-2622301bee83",
-        "credentialSource": "Self-Certified",
-        "issuerOrganization": "The Lawrenceville School",
-        "credentialStatus":"Valid",
-        "credentialType": schemaname,
-        "issuedDate" : todaydate,
-        "createdAt" : todaydate,
-        "updatedAt": todaydate,
-        "data": credentialdata,
-    }
-    credentialall[schemaname].push(credentialsample);
-    sessionStorage.setItem("all_credential",JSON.stringify(credentialall));
-    credentialall = JSON.parse(sessionStorage.getItem("issuerCredentialTable"));
-    credentialall.push(credentialsample);
-    sessionStorage.setItem("issuerCredentialTable", JSON.stringify(credentialall));
-    console.log(sessionStorage.getItem("issuerCredentialTable"));*/
+
 }
