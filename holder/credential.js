@@ -5,8 +5,6 @@ function createCredential(){
   for (let j of ["Student ID Credential","Academic Transcript Credential"]){
     if (JSON.stringify(credential[j.split(" ").join("")])!==undefined){
       for (let x of credential[j.split(" ").join("")]){
-        //if (x.issuedDate.substring(0,10)!='2023-04-07'&&x.issuedDate.substring(0,10)!='2023-04-10'||x.id=="bc6c510a-908f-4fa1-b87b-835f642e5d96"||x.id=="e5fecbb1-0f6a-4d9f-a9b4-f5c5eea56861"||JSON.parse(x.data).dateOfIssuance=='2026') continue; //JSON.parse(x.data).firstName=="sophia"
-        if (new Date(x.issuedDate)<new Date('2023-05-05T14:43:18.000Z')) continue;
         const box = document.getElementById("credentialcards");
         const clone = box.cloneNode(true); // true means clone all childNodes and all event handlers
         clone.setAttribute("id", "credentialcards " +counter);
