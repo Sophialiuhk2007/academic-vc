@@ -31,7 +31,6 @@ function getIssuedCredential(){
         for (let j of ["AcademicTranscriptCredential","StudentIDCredential"]){
           if (JSON.stringify(result[j])!='[]'){
               for (let x of result[j]){
-                  if (JSON.parse(x.data).institution!="The Lawrenceville School") continue;
                   table.push(x);
               }
           }
@@ -59,7 +58,6 @@ function getRequestCredential(){
       for (let j of ["AcademicTranscriptCredential","StudentIDCredential"]){
         if (JSON.stringify(result[j])!='[]'){
             for (let x of result[j]){
-              if (JSON.parse(x.data).institution!="The Lawrenceville School") continue;
                 table.push(x);
             }
         }
