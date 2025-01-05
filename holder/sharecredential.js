@@ -7,8 +7,6 @@ function credential_list(){
         }
         if (JSON.stringify(credential[j.split(" ").join("")])!==undefined){
         for (let x of credential[j.split(" ").join("")]){
-            //if (JSON.parse(x.data).firstName=="sophia") continue;
-            if (new Date(x.issuedDate)<new Date('2023-05-05T14:43:18.000Z')) continue;
             var k = document.getElementById("select_list");
             var option = document.createElement("option");
             option.value = counter;
