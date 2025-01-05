@@ -11,11 +11,11 @@ document.getElementById("user_name").textContent  = "The Lawrenceville School";
   }); 
   let counter=0;
   //console.log(sessionStorage.getItem("issuedCredentialTable"))
-  for (let x of credential){
+  /*for (let x of credential){
     t.row.add([JSON.parse(x.data).firstName + ' ' + JSON.parse(x.data).lastName, x.email, dic[x.credentialType], x.issuedDate.substr(0,10)+" "+x.issuedDate.substr(11,8), counter]).draw(false);
     counter++;
-  }
-  /*for (let j of ["Student ID Credential","Graduation Credential"]){
+  }*/
+  for (let j of ["Student ID Credential","Graduation Credential"]){
       if (JSON.stringify(credential[j])!='[]'){
           for (let x of credential[j]){
               table.push(x);
@@ -24,7 +24,7 @@ document.getElementById("user_name").textContent  = "The Lawrenceville School";
           }
       }
   }
-  sessionStorage.setItem("issuerCredentialTable",JSON.stringify(table));    */
+  sessionStorage.setItem("issuerCredentialTable",JSON.stringify(table));    
   $("#dataTable tbody tr").css('cursor', 'pointer');
   $('#dataTable tbody').on('click', 'tr', function () {
       var data = t.row(this).data();
