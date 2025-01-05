@@ -12,8 +12,7 @@ document.getElementById("user_name").textContent  = "University";
   let counter=-1;
   for (let x of credential){
     counter++;
-    if (new Date(x.receivedDate)<new Date('2023-05-05T14:43:18.000Z')) continue;
-    if (x.email=="swsliu07@gmail.com") t.row.add([JSON.parse(x.data).firstName + ' ' + JSON.parse(x.data).lastName, x.email, dic[x.credentialType], x.receivedDate.substr(0,10)+' '+x.receivedDate.substr(11,8),  counter]).draw(false);
+    t.row.add([JSON.parse(x.data).firstName + ' ' + JSON.parse(x.data).lastName, x.email, dic[x.credentialType], x.receivedDate.substr(0,10)+' '+x.receivedDate.substr(11,8),  counter]).draw(false);
   }
   
   $("#dataTable tbody tr").css('cursor', 'pointer');
