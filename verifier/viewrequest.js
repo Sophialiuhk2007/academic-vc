@@ -43,7 +43,7 @@ function update(){
         credential = JSON.parse(sessionStorage.getItem("received_credential")); 
         for (let x of credential){
             counter++;
-            if (x.email=="swsliu07@gmail.com") t.row.add([JSON.parse(x.data).firstName + ' ' + JSON.parse(x.data).lastName, x.email, dic[x.credentialType], x.receivedDate.substr(0,10)+' '+x.receivedDate.substr(11,8),  counter]).draw(false);
+            t.row.add([JSON.parse(x.data).firstName + ' ' + JSON.parse(x.data).lastName, x.email, dic[x.credentialType], x.receivedDate.substr(0,10)+' '+x.receivedDate.substr(11,8),  counter]).draw(false);
             
         }
         $("#dataTable tbody tr").css('cursor', 'pointer');
