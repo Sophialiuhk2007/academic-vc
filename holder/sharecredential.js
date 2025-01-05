@@ -1,7 +1,6 @@
 let dic = {"StudentIDCredential":"Student ID Credential", "AcademicTranscriptCredential":"Graduation Diploma"}
 function credential_list(){
     let credential = JSON.parse(sessionStorage.getItem("all_credential")), counter=1;
-    //console.log(JSON.stringify(credential));
     for (let j of ["Student ID Credential","Academic Transcript Credential"]){
         if (j.split(" ").join("")!=JSON.parse(sessionStorage.getItem("verificationRequestDetail")).verificationRequest.credentialType){
             continue;
